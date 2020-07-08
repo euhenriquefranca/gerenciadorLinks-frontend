@@ -3,10 +3,9 @@ import { Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
 import Layout from '../../../Layouts/Manage';
 import { getFormData } from '../../../../helpers/form';
-import {linkCreate} from '../../../../actions/LinkActions'
+import {linkCreate} from '../../../../actions/LinkActions';
 
 const Create = ({link, linkCreate}) => {
-
   const submitHandler = (e) => {
     e.preventDefault();
     const data = getFormData(e);

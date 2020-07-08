@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom';
 import {signOut} from '../../../actions/AccountActions';
 
 const Layout = ({ children, signOut, account }) => {
-
   if (!account) {
     return <Redirect to="/sign-in" />;
   }
@@ -35,7 +34,7 @@ const Layout = ({ children, signOut, account }) => {
 };
 
 const mapStateToProps = (state) =>{
-  return { account: state.account.account};
+  return {account: state.account.account};
 }
 
 export default connect(mapStateToProps, {signOut})(Layout);
