@@ -9,8 +9,7 @@ export default function(state = initialState, action) {
   const {type, payload} = action;
   switch(type) {
     case SIGN_IN:
-    case SIGN_UP:
-    
+    case SIGN_UP:    
       const response = payload ? payload.data : null;
       const account = response ? response.data : null;
       const metadata = response ? response.metadata : null;
