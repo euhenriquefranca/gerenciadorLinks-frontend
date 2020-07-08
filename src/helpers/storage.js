@@ -7,17 +7,17 @@ const defaultOptions = {
   path: '/',
 };
 
-export const getCookie = (name, options={}) => {
+export const getCookie = (name, options = {}) => {
   if(!name) return null;
-  return cookie.get(name, {... defaultOptions, ...options});
+  return cookie.get(name, { ...defaultOptions, ...options });
 };
 
 export const setCookie = (name, value, options = {}) => {
   if(!name || value === undefined) return null;
-  cookie.set(name, value, {...defaultOptions, ...options});
+  cookie.set(name, value, { ...defaultOptions, ...options });
   return true;
 };
-export const removeCookie = (name, options={}) => {
+export const removeCookie = (name, options = {}) => {
   if(!name) return null;
-  cookie.remove(name, {...defaultOptions, ...options});
+  cookie.remove(name, { ...defaultOptions, ...options });
 };
